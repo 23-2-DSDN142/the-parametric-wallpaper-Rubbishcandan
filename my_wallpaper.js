@@ -28,7 +28,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   //ellipse(100, 100, 45, 45); // draws a circle 45 pixels accross at location 100 pixels accross and 100 pixels down
 
 
-  function drawtopleftBlade (x,y){
+   function drawtopleftBlade (x,y){
 
 
     push()
@@ -42,16 +42,16 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   function drawtoprightBlade (x,y){
     
     push ()
-    rect(100,100,45,15);
+    translate (100,100)
     rotate(90)
-   // translate (75,-122.5)
-   
+    rect(0,0,35,15);
     pop ()
+    line (100,100,100,80)
   }
 
   function drawcenter (x,y){
 
-   ellipse (100,75,30,30)   
+   ellipse (100,75,25,25)   
   }
 
 
