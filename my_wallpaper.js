@@ -6,7 +6,7 @@ let rect_height = 20;
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
   pWallpaper.resolution(FIT_TO_SCREEN);
-  pWallpaper.show_guide(false); //set this to false when you're ready to print
+  pWallpaper.show_guide(true); //set this to false when you're ready to print
 
   //Grid settings
   pWallpaper.grid_settings.cell_width = 200;
@@ -88,16 +88,23 @@ function drawground(x,y) {
 }
 
 function drawWindmillBody(x,y) {
-  push()
-  noFill();
-  curve( 130,50, 120,80,140,181.5, 140,120)
-  curve( 70,50, 80,80, 60,181.5, 60,120)
-  line (80,80,120,80)
-  pop()
+  
+  beginShape()
+  vertex (60,185)
+  bezierVertex(65,170,75,120, 80,80)
+  vertex (120,80)
+  bezierVertex (125,120,135,170, 140,181.5)
+  vertex (60,185)
+  endShape();
 }
 
 function drawWindmillRoof(x,y) {
   arc (100, 83.5, 45, 40, 180, 360, CHORD);
+
+
+}
+
+function drawFlowers(x,y) {
 
 
 }
