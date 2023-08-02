@@ -20,12 +20,15 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+  drawWindmillBody (0,0)
+  drawWindmillRoof (0,0)
   drawleftBlade(0, 0)
   drawBottomBlade(0, 0)
   drawtopBlade(0, 0)
   drawrightBlade(0, 0)
   drawcenter(0, 0)
   drawground (0,0)
+  
 }
 
 //ellipse(100, 100, 45, 45); // draws a circle 45 pixels accross at location 100 pixels accross and 100 pixels down
@@ -68,13 +71,13 @@ function drawrightBlade(x,y){
   rotate (180)
   rect (0, 0, 35,15);
   pop()
-  line(110, 75, 120, 75)
+  line(100, 75, 120, 75)
 
 }
 
 function drawcenter(x, y) {
 
-  ellipse(100, 75, 25, 25);
+  ellipse(100, 75, 10, 10);
 }
 
 function drawground(x,y) {
@@ -85,6 +88,16 @@ function drawground(x,y) {
 }
 
 function drawWindmillBody(x,y) {
+  push()
+  noFill();
+  curve( 130,50, 120,80,140,181.5, 140,120)
+  curve( 70,50, 80,80, 60,181.5, 60,120)
+  line (80,80,120,80)
+  pop()
+}
+
+function drawWindmillRoof(x,y) {
+  arc (100, 83.5, 45, 40, 180, 360, CHORD);
 
 
 }
