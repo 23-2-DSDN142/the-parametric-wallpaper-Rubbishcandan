@@ -2,7 +2,7 @@
 let rect_width = 20;
 let rect_height = 20;
 
-let flowercolour = ['#ed1b0c','#800080','#FFA500', '#ffffff','#FFFF00','#FFC0CB']
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB']
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -21,8 +21,8 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  drawFlagTop(0,0)
-  drawFlagBottom(0,0)
+  drawFlagTop(0, 0)
+  drawFlagBottom(0, 0)
   drawWindmillBody(0, 0)
   drawWindmillRoof(0, 0)
   drawleftBlade(0, 0)
@@ -111,65 +111,65 @@ function drawFlowers(x, y) {
   push()
   fill(random(flowercolour))
   ellipse(30, 190, 2.5, 5)
-  line (30,193,30,195)
+  line(30, 193, 30, 195)
   fill(random(flowercolour))
   ellipse(40, 192, 2.5, 5)
-  line (40,195,40,197)
+  line(40, 195, 40, 197)
   fill(random(flowercolour))
   ellipse(50, 187, 2.5, 5)
-  line (50,190,50,192)
+  line(50, 190, 50, 192)
   fill(random(flowercolour))
   ellipse(60, 191, 2.5, 5)
-  line (60,194,60,196)
+  line(60, 194, 60, 196)
   fill(random(flowercolour))
   ellipse(70, 185, 2.5, 5)
-  line (70,188,70, 190)
+  line(70, 188, 70, 190)
   fill(random(flowercolour))
   ellipse(80, 186, 2.5, 5)
-  line (80,189,80,191)
+  line(80, 189, 80, 191)
   fill(random(flowercolour))
   ellipse(90, 190, 2.5, 5)
-  line (90,193,90,195)
+  line(90, 193, 90, 195)
   fill(random(flowercolour))
   ellipse(100, 187.5, 2.5, 5)
-  line (100,190.5,100,192.5)
+  line(100, 190.5, 100, 192.5)
   fill(random(flowercolour))
   ellipse(110, 192, 2.5, 5)
-  line (110,195,110,197)
+  line(110, 195, 110, 197)
   fill(random(flowercolour))
   ellipse(120, 187, 2.5, 5)
-  line (120, 190,120, 192)
+  line(120, 190, 120, 192)
   fill(random(flowercolour))
   ellipse(130, 191, 2.5, 5)
-  line (130,194,130, 196)
+  line(130, 194, 130, 196)
   fill(random(flowercolour))
   ellipse(140, 186, 2.5, 5)
-  line (140, 189,140,191)
+  line(140, 189, 140, 191)
   fill(random(flowercolour))
   ellipse(150, 194, 2.5, 5)
-  line (150,197,150,199)
+  line(150, 197, 150, 199)
   fill(random(flowercolour))
   ellipse(160, 190, 2.5, 5)
-  line (160,193,160,195)
+  line(160, 193, 160, 195)
   fill(random(flowercolour))
-  ellipse (170,192,2.5,5)
-  line (170, 195,170,197)
+  ellipse(170, 192, 2.5, 5)
+  line(170, 195, 170, 197)
   pop()
 }
-function drawFlagTop (x,y){
+
+function drawFlagTop(x, y) {
   push()
   noStroke()
   fill('#AD1D25')
-  rect (0,0, 200,66.6)
+  rect(0, 0, 200, 66.6)
   pop()
 }
-function drawFlagBottom (x,y){
+
+function drawFlagBottom(x, y) {
   push()
   noStroke()
   fill('#1E4785')
-  rect (0,200,200,-66.6)
+  rect(0, 200, 200, -66.6)
   pop()
-  
+
 }
- 
-  
