@@ -3,6 +3,7 @@ let rect_width = 20;
 let rect_height = 20;
 
 let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB']
+let setflag = true 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -17,12 +18,15 @@ function setup_wallpaper(pWallpaper) {
 
 function wallpaper_background() {
   //background(240, 255, 240); //light honeydew green colour
-  background(255)
+  background(0)
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
+  if (setflag){
   drawFlagTop(0, 0)
+  drawFlagMiddle(0,0)
   drawFlagBottom(0, 0)
+  }
   drawWindmillBody(0, 0)
   drawWindmillRoof(0, 0)
   drawleftBlade(0, 0)
@@ -164,6 +168,15 @@ function drawFlagTop(x, y) {
   rect(0, 0, 200, 66.6)
   pop()
 }
+function drawFlagMiddle(x,y) {
+  push()
+  noStroke()
+  fill(255)
+  rect(0, 66.6, 200, 66.7)
+  pop()
+
+}
+
 
 function drawFlagBottom(x, y) {
   push()
