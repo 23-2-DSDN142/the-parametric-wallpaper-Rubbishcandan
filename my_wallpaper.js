@@ -35,6 +35,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   drawBottomBlade(0, 0)
   drawtopBlade(0, 0)
   drawrightBlade(0, 0)
+  drawWindmillDoor(0,0)
   drawcenter(0, 0)
   drawground(0, 0)
   drawFlowers(0, 0)
@@ -46,6 +47,7 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 function drawleftBlade(x, y) {
 
   push()
+  fill('#faf7be')
   translate(45, 60)
   rotate(0)
   rect(0, 0, 35, 15);
@@ -56,6 +58,7 @@ function drawleftBlade(x, y) {
 function drawBottomBlade(x, y) {
 
   push()
+  fill('#faf7be')
   translate(100, 95)
   rotate(90)
   rect(0, 0, 35, 15);
@@ -66,6 +69,7 @@ function drawBottomBlade(x, y) {
 function drawtopBlade(x, y) {
 
   push()
+  fill('#faf7be')
   translate(100, 55)
   rotate(270)
   rect(0, 0, 35, 15);
@@ -76,6 +80,7 @@ function drawtopBlade(x, y) {
 function drawrightBlade(x, y) {
 
   push()
+  fill('#faf7be')
   translate(155, 90)
   rotate(180)
   rect(0, 0, 35, 15);
@@ -85,8 +90,10 @@ function drawrightBlade(x, y) {
 }
 
 function drawcenter(x, y) {
-
-  ellipse(100, 75, 10, 10);
+push()
+fill(0)
+ellipse(100, 75, 10, 10);
+pop()
 }
 
 function drawground(x, y) {
@@ -97,7 +104,8 @@ function drawground(x, y) {
 }
 
 function drawWindmillBody(x, y) {
-
+  push()
+  fill('#c47d3b')
   beginShape()
   vertex(60, 185)
   bezierVertex(65, 170, 75, 120, 80, 80)
@@ -105,9 +113,11 @@ function drawWindmillBody(x, y) {
   bezierVertex(125, 120, 135, 170, 140, 181.5)
   vertex(60, 185)
   endShape();
+  pop()
 }
 
 function drawWindmillRoof(x, y) {
+  fill('#755454')
   arc(100, 83.5, 45, 40, 180, 360, CHORD);
 
 
@@ -179,7 +189,6 @@ function drawFlagMiddle(x,y) {
 
 }
 
-
 function drawFlagBottom(x, y) {
   push()
   noStroke()
@@ -187,4 +196,17 @@ function drawFlagBottom(x, y) {
   rect(0, 200, 200, -66.6)
   pop()
 
+}
+
+function drawWindmillDoor(x,y){
+push()
+fill('#856e42')
+beginShape()
+vertex(90,180)
+vertex(90,160)
+bezierVertex(90,160,100,150,110,160)
+vertex(110,180)
+vertex(90,180)
+endShape(close)
+pop()
 }
