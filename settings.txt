@@ -139,7 +139,7 @@ let backgroundcolour = 0 //colour of the backround, #1c7ad9 default
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -167,7 +167,7 @@ let backgroundcolour = '#db9597' //colour of the backround, #1c7ad9 default
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -195,7 +195,7 @@ let backgroundcolour = '#db9597' //colour of the backround, #1c7ad9 default
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -223,7 +223,7 @@ let backgroundcolour = '#e0b484' //colour of the backround, #1c7ad9 default
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -251,7 +251,7 @@ let backgroundcolour = '#d9c425' //colour of the backround, #1c7ad9 default
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
