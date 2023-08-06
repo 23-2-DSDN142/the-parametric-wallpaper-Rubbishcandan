@@ -2,12 +2,15 @@
 let rect_width = 20;
 let rect_height = 20;
 
-let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB']
-let setflag = true
-let flowerwidth = 2.5
-let flowerheight = 5
-let bladewidth = 35
-let setflowers = true
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB'] //Colour range for flowers, red, purple, orange, white, yellow, pink
+let setflag = true //variable to turn flag backround on or off
+let flowerwidth = 2.5 //width of flowers, 2.5 default 
+let flowerheight = 5 //height of flowers, 5 default 
+let bladewidth = 35 //width of windmillblade, 35 works best 
+let setflowers = true //variable to turn flowers on or off 
+let bladecolour = '#faf7be' //default cream colour #faf7be 
+let bladeheight = 15 //height of windmill blades, 15 works best 
+let windmillbodycolour = '#c47d3b' //colour of windmill body, #c47d3b default, reddish brown 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -21,29 +24,28 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  //background(240, 255, 240); //light honeydew green colour
   background(0)
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  if (setflag) {
-    drawFlagTop(0, 0)
-    drawFlagMiddle(0, 0)
-    drawFlagBottom(0, 0)
+  if (setflag) { //toggle flag on or off 
+    drawFlagTop(0, 0) //draws top of flag  
+    drawFlagMiddle(0, 0) //draws centre of flag 
+    drawFlagBottom(0, 0) //draws bottom of flag 
   }
-  drawWindmillBars(0, 0)
-  drawWindmillBody(0, 0)
-  drawWindmillRoof(0, 0)
-  drawleftBlade(0, 0)
-  drawBottomBlade(0, 0)
-  drawtopBlade(0, 0)
-  drawrightBlade(0, 0)
-  drawWindmillDoor(0, 0)
-  drawWindmillWindow(0, 0)
-  drawcenter(0, 0)
-  drawground(0, 0)
-  if (setflowers){
-    drawFlowers(0, 0)
+  drawWindmillBars(0, 0) //draws the side bars 
+  drawWindmillBody(0, 0) //draws the body of windmill 
+  drawWindmillRoof(0, 0) //draws the roof of windmill 
+  drawleftBlade(0, 0) //draws the left blade 
+  drawBottomBlade(0, 0) //draws the bottom blade 
+  drawtopBlade(0, 0) //draws the top blade 
+  drawrightBlade(0, 0) //draws the right blade 
+  drawWindmillDoor(0, 0) //draws the windmill door 
+  drawWindmillWindow(0, 0) //draws the windmill window 
+  drawcenter(0, 0) //draws the centre blade connecter 
+  drawground(0, 0) //draws the flowers 
+  if (setflowers){ //if statement to toggle flowers on or off 
+    drawFlowers(0, 0) //draws the flowers
   }
 
 }
@@ -54,10 +56,10 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 function drawleftBlade(x, y) {
 
   push()
-  fill('#faf7be')
+  fill(bladecolour) //colours the windmill blades 
   translate(45, 60)
   rotate(0)
-  rect(0, 0, bladewidth, 15);
+  rect(0, 0, bladewidth, bladeheight);
   pop()
   line(65, 75, 100, 75)
 }
@@ -65,10 +67,10 @@ function drawleftBlade(x, y) {
 function drawBottomBlade(x, y) {
 
   push()
-  fill('#faf7be')
+  fill(bladecolour) //colours the windmill blades 
   translate(100, 95)
   rotate(90)
-  rect(0, 0, bladewidth, 15);
+  rect(0, 0, bladewidth, bladeheight);
   pop()
   line(100, 100, 100, 75)
 }
@@ -76,10 +78,10 @@ function drawBottomBlade(x, y) {
 function drawtopBlade(x, y) {
 
   push()
-  fill('#faf7be')
+  fill(bladecolour) //colours the windmill blades 
   translate(100, 55)
   rotate(270)
-  rect(0, 0, bladewidth, 15);
+  rect(0, 0, bladewidth, bladeheight);
   pop()
   line(100, 40, 100, 75)
 }
@@ -87,10 +89,10 @@ function drawtopBlade(x, y) {
 function drawrightBlade(x, y) {
 
   push()
-  fill('#faf7be')
+  fill(bladecolour) //colours the windmill blades 
   translate(155, 90)
   rotate(180)
-  rect(0, 0, bladewidth, 15);
+  rect(0, 0, bladewidth, bladeheight);
   pop()
   line(100, 75, 120, 75)
 
@@ -98,21 +100,21 @@ function drawrightBlade(x, y) {
 
 function drawcenter(x, y) {
   push()
-  fill(0)
+  fill(0) //black 
   ellipse(100, 75, 7.5, 7.5);
   pop()
 }
 
 function drawground(x, y) {
   push()
-  fill('#16c444')
+  fill('#16c444') //green 
   arc(100, 200, 200, 40, 180, 360);
   pop()
 }
 
 function drawWindmillBody(x, y) {
   push()
-  fill('#c47d3b')
+  fill(windmillbodycolour) 
   beginShape()
   vertex(60, 185)
   bezierVertex(65, 170, 75, 120, 80, 80)
@@ -125,8 +127,8 @@ function drawWindmillBody(x, y) {
 
 function drawWindmillRoof(x, y) {
   push()
-  fill('#755454')
-  arc(100, 83.5, 45, 40, 180, 360, CHORD);
+  fill('#755454') //dark grey 
+  arc(100, 83.5, 45, 40, 180, 360, CHORD); //semi circle roof 
   pop()
 
 }
@@ -183,15 +185,15 @@ function drawFlowers(x, y) {
 
 function drawFlagTop(x, y) {
   push()
-  noStroke()
-  fill('#AD1D25')
+  noStroke() //disable stroke 
+  fill('#AD1D25') //bright vermillion 
   rect(0, 0, 200, 66.6)
   pop()
 }
 
 function drawFlagMiddle(x, y) {
   push()
-  noStroke()
+  noStroke() //disable stroke
   fill(255)
   rect(0, 66.6, 200, 66.7)
   pop()
@@ -200,8 +202,8 @@ function drawFlagMiddle(x, y) {
 
 function drawFlagBottom(x, y) {
   push()
-  noStroke()
-  fill('#1E4785')
+  noStroke() //disable stroke
+  fill('#1E4785') //dark blue 
   rect(0, 200, 200, -66.6)
   pop()
 
@@ -209,7 +211,7 @@ function drawFlagBottom(x, y) {
 
 function drawWindmillDoor(x, y) {
   push()
-  fill('#856e42')
+  fill('#856e42') //brown 
   beginShape()
   vertex(90, 180)
   vertex(90, 160)
@@ -223,11 +225,11 @@ function drawWindmillDoor(x, y) {
 
 function drawWindmillBars(x, y) {
   push()
-  strokeWeight(1.2)
+  strokeWeight(1.2) //1.2x stroke weight 
   line(123, 100, 140, 77.5)
   line(77, 100, 60, 77.5)
-  stroke('brown')
-  strokeWeight(1.5)
+  stroke('brown') //brown stroke colour 
+  strokeWeight(1.5) //1.5x stroke weight 
   line(77.5, 80, 57.5, 80)
   line(122.5, 80, 142.5, 80)
   pop()
@@ -236,10 +238,10 @@ function drawWindmillBars(x, y) {
 function drawWindmillWindow(x, y) {
   rect(91.5, 134, 17, 17)
   push()
-  fill('#966232')
-  stroke(255)
+  fill('#966232') //lighter brown 
+  stroke(255) //white stroke colour 
   rect(92.5, 135, 15, 15)
-  strokeWeight(0.7)
+  strokeWeight(0.7) //0.7x stroke weight 
   line(100, 135, 100, 150)
   line(92.5, 142.5, 107.5, 142.5)
   pop()
