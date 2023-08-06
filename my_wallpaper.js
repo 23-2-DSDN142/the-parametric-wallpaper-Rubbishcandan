@@ -11,10 +11,11 @@ let setflowers = true //variable to turn flowers on or off
 let bladecolour = '#faf7be' //default cream colour #faf7be 
 let bladeheight = 15 //height of windmill blades, 15 works best 
 let windmillbodycolour = '#c47d3b' //colour of windmill body, #c47d3b default, reddish brown 
+let backgroundcolour = '#1c7ad9' //colour of the backround, #1c7ad9 default 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
-  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.resolution(NINE_LANDSCAPE);
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
@@ -24,7 +25,7 @@ function setup_wallpaper(pWallpaper) {
 }
 
 function wallpaper_background() {
-  background(0)
+  background(backgroundcolour) //set the backround colour 
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
@@ -55,46 +56,53 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
 
 function drawleftBlade(x, y) {
 
+  line(65, 75, 100, 75)
   push()
+  stroke(0)
   fill(bladecolour) //colours the windmill blades 
   translate(45, 60)
   rotate(0)
   rect(0, 0, bladewidth, bladeheight);
   pop()
-  line(65, 75, 100, 75)
+  
 }
 
 function drawBottomBlade(x, y) {
 
+  line(100, 100, 100, 75)
   push()
+  stroke(0)
   fill(bladecolour) //colours the windmill blades 
   translate(100, 95)
   rotate(90)
   rect(0, 0, bladewidth, bladeheight);
   pop()
-  line(100, 100, 100, 75)
+  
 }
 
 function drawtopBlade(x, y) {
-
+  line(100, 40, 100, 75)
   push()
+  stroke(0)
   fill(bladecolour) //colours the windmill blades 
   translate(100, 55)
   rotate(270)
   rect(0, 0, bladewidth, bladeheight);
   pop()
-  line(100, 40, 100, 75)
+ 
 }
 
 function drawrightBlade(x, y) {
 
+  line(100, 75, 140, 75)
   push()
+  stroke(0)
   fill(bladecolour) //colours the windmill blades 
   translate(155, 90)
   rotate(180)
   rect(0, 0, bladewidth, bladeheight);
   pop()
-  line(100, 75, 120, 75)
+  
 
 }
 
@@ -187,7 +195,7 @@ function drawFlagTop(x, y) {
   push()
   noStroke() //disable stroke 
   fill('#AD1D25') //bright vermillion 
-  rect(0, 0, 200, 66.6)
+  rect(0, 0, 201, 66.6)
   pop()
 }
 
@@ -195,7 +203,7 @@ function drawFlagMiddle(x, y) {
   push()
   noStroke() //disable stroke
   fill(255)
-  rect(0, 66.6, 200, 66.7)
+  rect(0, 66.6, 201, 66.7)
   pop()
 
 }
@@ -204,7 +212,7 @@ function drawFlagBottom(x, y) {
   push()
   noStroke() //disable stroke
   fill('#1E4785') //dark blue 
-  rect(0, 200, 200, -66.6)
+  rect(0, 200, 201, -66.6)
   pop()
 
 }

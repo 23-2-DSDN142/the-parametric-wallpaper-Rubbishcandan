@@ -7,15 +7,20 @@ Your final settings.txt will look something like this when you are finished:
 /////////////////////////////////
 
 Wallpaper 1:
-
 //your parameter variables go here!
-let rect_width  = 20;
+let rect_width = 20;
 let rect_height = 20;
-let paramter1 = 10;
-let paramter2 = true;
-let paramter3 = 50; 
-let paramter4 = 0; 
-let paramter5 = 60;
+
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB'] //Colour range for flowers, red, purple, orange, white, yellow, pink
+let setflag = true //variable to turn flag backround on or off
+let flowerwidth = 2.5 //width of flowers, 2.5 default 
+let flowerheight = 5 //height of flowers, 5 default 
+let bladewidth = 35 //width of windmillblade, 35 works best 
+let setflowers = true //variable to turn flowers on or off 
+let bladecolour = '#faf7be' //default cream colour #faf7be 
+let bladeheight = 15 //height of windmill blades, 15 works best 
+let windmillbodycolour = '#c47d3b' //colour of windmill body, #c47d3b default, reddish brown 
+let backgroundcolour = '#1c7ad9' //colour of the backround, #1c7ad9 default 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -23,23 +28,28 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 50;
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
 }
 
 /////////////////////////////////
 
 Wallpaper 2:
-
 //your parameter variables go here!
-let rect_width  = 10;
-let rect_height = 10;
-let paramter1 = 20;
-let paramter2 = false;
-let paramter3 = 50; 
-let paramter4 = 80; 
-let paramter5 = 30;
+let rect_width = 20;
+let rect_height = 20;
+
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB'] //Colour range for flowers, red, purple, orange, white, yellow, pink
+let setflag = false //variable to turn flag backround on or off
+let flowerwidth = 2.5 //width of flowers, 2.5 default 
+let flowerheight = 5 //height of flowers, 5 default 
+let bladewidth = 35 //width of windmillblade, 35 works best 
+let setflowers = true //variable to turn flowers on or off 
+let bladecolour = '#faf7be' //default cream colour #faf7be 
+let bladeheight = 15 //height of windmill blades, 15 works best 
+let windmillbodycolour = '#c47d3b' //colour of windmill body, #c47d3b default, reddish brown 
+let backgroundcolour = '#1c7ad9' //colour of the backround, #1c7ad9 default 
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(GRID_WALLPAPER);
@@ -47,7 +57,205 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.show_guide(false); //set this to false when you're ready to print
 
   //Grid settings
-  pWallpaper.grid_settings.cell_width  = 100;
-  pWallpaper.grid_settings.cell_height = 100;
-  pWallpaper.grid_settings.row_offset  = 0;
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+}
+
+//////////////////////////////////
+
+Wallpaper 3:
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 20;
+
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB'] //Colour range for flowers, red, purple, orange, white, yellow, pink
+let setflag = false //variable to turn flag backround on or off
+let flowerwidth = 2.5 //width of flowers, 2.5 default 
+let flowerheight = 5 //height of flowers, 5 default 
+let bladewidth = 35 //width of windmillblade, 35 works best 
+let setflowers = false //variable to turn flowers on or off 
+let bladecolour = '#faf7be' //default cream colour #faf7be 
+let bladeheight = 15 //height of windmill blades, 15 works best 
+let windmillbodycolour = '#c47d3b' //colour of windmill body, #c47d3b default, reddish brown 
+let backgroundcolour = '#95b0bf' //colour of the backround, #1c7ad9 default 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+}
+
+////////////////////////////////////
+
+Wallpaper 4: 
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 20;
+
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB'] //Colour range for flowers, red, purple, orange, white, yellow, pink
+let setflag = false //variable to turn flag backround on or off
+let flowerwidth = 5 //width of flowers, 2.5 default 
+let flowerheight = 5 //height of flowers, 5 default 
+let bladewidth = 20 //width of windmillblade, 35 works best 
+let setflowers = true //variable to turn flowers on or off 
+let bladecolour = '#faf7be' //default cream colour #faf7be 
+let bladeheight = 15 //height of windmill blades, 15 works best 
+let windmillbodycolour = '#c47d3b' //colour of windmill body, #c47d3b default, reddish brown 
+let backgroundcolour = '#82c27e' //colour of the backround, #1c7ad9 default 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(NINE_LANDSCAPE);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+}
+
+///////////////////////////////////////
+Wallpaper 5:
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 20;
+
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB'] //Colour range for flowers, red, purple, orange, white, yellow, pink
+let setflag = true //variable to turn flag backround on or off
+let flowerwidth = 7 //width of flowers, 2.5 default 
+let flowerheight = 10 //height of flowers, 5 default 
+let bladewidth = 35 //width of windmillblade, 35 works best 
+let setflowers = true //variable to turn flowers on or off 
+let bladecolour = '#faf7be' //default cream colour #faf7be 
+let bladeheight = 15 //height of windmill blades, 15 works best 
+let windmillbodycolour = '#97b0ac' //colour of windmill body, #c47d3b default, reddish brown 
+let backgroundcolour = 0 //colour of the backround, #1c7ad9 default 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+}
+
+///////////////////////////////////////////
+Wallpaper 6: 
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 20;
+
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB'] //Colour range for flowers, red, purple, orange, white, yellow, pink
+let setflag = false //variable to turn flag backround on or off
+let flowerwidth = 4 //width of flowers, 2.5 default 
+let flowerheight = 5 //height of flowers, 5 default 
+let bladewidth = 35 //width of windmillblade, 35 works best 
+let setflowers = true //variable to turn flowers on or off 
+let bladecolour = '#faf7be' //default cream colour #faf7be 
+let bladeheight = 15 //height of windmill blades, 15 works best 
+let windmillbodycolour = '#d4c524' //colour of windmill body, #c47d3b default, reddish brown 
+let backgroundcolour = '#db9597' //colour of the backround, #1c7ad9 default 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+}
+
+////////////////////////////////////////////
+Wallpaper 7: 
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 20;
+
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB'] //Colour range for flowers, red, purple, orange, white, yellow, pink
+let setflag = true //variable to turn flag backround on or off
+let flowerwidth = 4 //width of flowers, 2.5 default 
+let flowerheight = 5 //height of flowers, 5 default 
+let bladewidth = 35 //width of windmillblade, 35 works best 
+let setflowers = false //variable to turn flowers on or off 
+let bladecolour = '#faf7be' //default cream colour #faf7be 
+let bladeheight = 15 //height of windmill blades, 15 works best 
+let windmillbodycolour = '#8347d1' //colour of windmill body, #c47d3b default, reddish brown 
+let backgroundcolour = '#db9597' //colour of the backround, #1c7ad9 default 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+}
+
+//////////////////////////////////////////////
+Wallpaper 8: 
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 20;
+
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB'] //Colour range for flowers, red, purple, orange, white, yellow, pink
+let setflag = false //variable to turn flag backround on or off
+let flowerwidth = 4 //width of flowers, 2.5 default 
+let flowerheight = 8 //height of flowers, 5 default 
+let bladewidth = 35 //width of windmillblade, 35 works best 
+let setflowers = true //variable to turn flowers on or off 
+let bladecolour = '#faf7be' //default cream colour #faf7be 
+let bladeheight = 15 //height of windmill blades, 15 works best 
+let windmillbodycolour = '#e31037' //colour of windmill body, #c47d3b default, reddish brown 
+let backgroundcolour = '#e0b484' //colour of the backround, #1c7ad9 default 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
+}
+
+////////////////////////////////////////////////
+Wallpaper 9:
+//your parameter variables go here!
+let rect_width = 20;
+let rect_height = 20;
+
+let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB'] //Colour range for flowers, red, purple, orange, white, yellow, pink
+let setflag = false //variable to turn flag backround on or off
+let flowerwidth = 9 //width of flowers, 2.5 default 
+let flowerheight = 8 //height of flowers, 5 default 
+let bladewidth = 35 //width of windmillblade, 35 works best 
+let setflowers = true //variable to turn flowers on or off 
+let bladecolour = '#be25d9' //default cream colour #faf7be 
+let bladeheight = 15 //height of windmill blades, 15 works best 
+let windmillbodycolour = '#52d925' //colour of windmill body, #c47d3b default, reddish brown 
+let backgroundcolour = '#d9c425' //colour of the backround, #1c7ad9 default 
+
+function setup_wallpaper(pWallpaper) {
+  pWallpaper.output_mode(GRID_WALLPAPER);
+  pWallpaper.resolution(FIT_TO_SCREEN);
+  pWallpaper.show_guide(false); //set this to false when you're ready to print
+
+  //Grid settings
+  pWallpaper.grid_settings.cell_width = 200;
+  pWallpaper.grid_settings.cell_height = 200;
+  pWallpaper.grid_settings.row_offset = 50;
 }
