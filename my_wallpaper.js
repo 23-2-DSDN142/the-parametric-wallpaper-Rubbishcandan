@@ -6,6 +6,8 @@ let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC
 let setflag = true
 let flowerwidth = 2.5
 let flowerheight = 5
+let bladewidth = 35
+let setflowers = true
 
 function setup_wallpaper(pWallpaper) {
   pWallpaper.output_mode(DEVELOP_GLYPH);
@@ -29,18 +31,21 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
     drawFlagMiddle(0, 0)
     drawFlagBottom(0, 0)
   }
+  drawWindmillBars(0, 0)
   drawWindmillBody(0, 0)
   drawWindmillRoof(0, 0)
-  drawWindmillBars(0,0)
   drawleftBlade(0, 0)
   drawBottomBlade(0, 0)
   drawtopBlade(0, 0)
   drawrightBlade(0, 0)
   drawWindmillDoor(0, 0)
+  drawWindmillWindow(0, 0)
   drawcenter(0, 0)
   drawground(0, 0)
-  drawFlowers(0, 0)
-  
+  if (setflowers){
+    drawFlowers(0, 0)
+  }
+
 }
 
 //ellipse(100, 100, 45, 45); // draws a circle 45 pixels accross at location 100 pixels accross and 100 pixels down
@@ -52,7 +57,7 @@ function drawleftBlade(x, y) {
   fill('#faf7be')
   translate(45, 60)
   rotate(0)
-  rect(0, 0, 35, 15);
+  rect(0, 0, bladewidth, 15);
   pop()
   line(65, 75, 100, 75)
 }
@@ -63,7 +68,7 @@ function drawBottomBlade(x, y) {
   fill('#faf7be')
   translate(100, 95)
   rotate(90)
-  rect(0, 0, 35, 15);
+  rect(0, 0, bladewidth, 15);
   pop()
   line(100, 100, 100, 75)
 }
@@ -74,7 +79,7 @@ function drawtopBlade(x, y) {
   fill('#faf7be')
   translate(100, 55)
   rotate(270)
-  rect(0, 0, 35, 15);
+  rect(0, 0, bladewidth, 15);
   pop()
   line(100, 40, 100, 75)
 }
@@ -85,7 +90,7 @@ function drawrightBlade(x, y) {
   fill('#faf7be')
   translate(155, 90)
   rotate(180)
-  rect(0, 0, 35, 15);
+  rect(0, 0, bladewidth, 15);
   pop()
   line(100, 75, 120, 75)
 
@@ -212,14 +217,30 @@ function drawWindmillDoor(x, y) {
   vertex(110, 180)
   vertex(90, 180)
   endShape(close)
-  line (100,180,100,156)
+  line(100, 180, 100, 156)
   pop()
 }
 
-function drawWindmillBars(x, y){
+function drawWindmillBars(x, y) {
+  push()
+  strokeWeight(1.2)
+  line(123, 100, 140, 77.5)
+  line(77, 100, 60, 77.5)
+  stroke('brown')
+  strokeWeight(1.5)
+  line(77.5, 80, 57.5, 80)
+  line(122.5, 80, 142.5, 80)
+  pop()
+}
 
-  line (77.5,80, 57.5,80)
-  line (77, 100,60, 77.5)
-  line (122.5,80, 142.5,80)
-  line (123, 100,140,77.5)
+function drawWindmillWindow(x, y) {
+  rect(91.5, 134, 17, 17)
+  push()
+  fill('#966232')
+  stroke(255)
+  rect(92.5, 135, 15, 15)
+  strokeWeight(0.7)
+  line(100, 135, 100, 150)
+  line(92.5, 142.5, 107.5, 142.5)
+  pop()
 }
