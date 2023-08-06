@@ -3,8 +3,8 @@ let rect_width = 20;
 let rect_height = 20;
 
 let flowercolour = ['#ed1b0c', '#800080', '#FFA500', '#ffffff', '#FFFF00', '#FFC0CB']
-let setflag = true 
-let flowerwidth = 2.5 
+let setflag = true
+let flowerwidth = 2.5
 let flowerheight = 5
 
 function setup_wallpaper(pWallpaper) {
@@ -24,21 +24,23 @@ function wallpaper_background() {
 }
 
 function my_symbol() { // do not rename this function. Treat this similarly to a Draw function
-  if (setflag){
-  drawFlagTop(0, 0)
-  drawFlagMiddle(0,0)
-  drawFlagBottom(0, 0)
+  if (setflag) {
+    drawFlagTop(0, 0)
+    drawFlagMiddle(0, 0)
+    drawFlagBottom(0, 0)
   }
   drawWindmillBody(0, 0)
   drawWindmillRoof(0, 0)
+  drawWindmillBars(0,0)
   drawleftBlade(0, 0)
   drawBottomBlade(0, 0)
   drawtopBlade(0, 0)
   drawrightBlade(0, 0)
-  drawWindmillDoor(0,0)
+  drawWindmillDoor(0, 0)
   drawcenter(0, 0)
   drawground(0, 0)
   drawFlowers(0, 0)
+  
 }
 
 //ellipse(100, 100, 45, 45); // draws a circle 45 pixels accross at location 100 pixels accross and 100 pixels down
@@ -63,7 +65,7 @@ function drawBottomBlade(x, y) {
   rotate(90)
   rect(0, 0, 35, 15);
   pop()
-  line(100, 100, 100, 80)
+  line(100, 100, 100, 75)
 }
 
 function drawtopBlade(x, y) {
@@ -74,7 +76,7 @@ function drawtopBlade(x, y) {
   rotate(270)
   rect(0, 0, 35, 15);
   pop()
-  line(100, 40, 100, 70)
+  line(100, 40, 100, 75)
 }
 
 function drawrightBlade(x, y) {
@@ -90,10 +92,10 @@ function drawrightBlade(x, y) {
 }
 
 function drawcenter(x, y) {
-push()
-fill(0)
-ellipse(100, 75, 10, 10);
-pop()
+  push()
+  fill(0)
+  ellipse(100, 75, 7.5, 7.5);
+  pop()
 }
 
 function drawground(x, y) {
@@ -117,9 +119,10 @@ function drawWindmillBody(x, y) {
 }
 
 function drawWindmillRoof(x, y) {
+  push()
   fill('#755454')
   arc(100, 83.5, 45, 40, 180, 360, CHORD);
-
+  pop()
 
 }
 
@@ -180,7 +183,8 @@ function drawFlagTop(x, y) {
   rect(0, 0, 200, 66.6)
   pop()
 }
-function drawFlagMiddle(x,y) {
+
+function drawFlagMiddle(x, y) {
   push()
   noStroke()
   fill(255)
@@ -198,15 +202,24 @@ function drawFlagBottom(x, y) {
 
 }
 
-function drawWindmillDoor(x,y){
-push()
-fill('#856e42')
-beginShape()
-vertex(90,180)
-vertex(90,160)
-bezierVertex(90,160,100,150,110,160)
-vertex(110,180)
-vertex(90,180)
-endShape(close)
-pop()
+function drawWindmillDoor(x, y) {
+  push()
+  fill('#856e42')
+  beginShape()
+  vertex(90, 180)
+  vertex(90, 160)
+  bezierVertex(90, 160, 100, 150, 110, 160)
+  vertex(110, 180)
+  vertex(90, 180)
+  endShape(close)
+  line (100,180,100,156)
+  pop()
+}
+
+function drawWindmillBars(x, y){
+
+  line (77.5,80, 57.5,80)
+  line (77, 100,60, 77.5)
+  line (122.5,80, 142.5,80)
+  line (123, 100,140,77.5)
 }
