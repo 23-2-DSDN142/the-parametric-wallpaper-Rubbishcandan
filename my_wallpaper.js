@@ -24,6 +24,7 @@ function setup_wallpaper(pWallpaper) {
   pWallpaper.grid_settings.row_offset = 50;
 }
 
+
 function wallpaper_background() {
   background(backgroundcolour) //set the backround colour 
 }
