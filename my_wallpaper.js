@@ -46,14 +46,11 @@ function my_symbol() { // do not rename this function. Treat this similarly to a
   drawWindmillWindow(0, 0) //draws the windmill window 
   drawcenter(0, 0) //draws the centre blade connecter 
   drawground(0, 0) //draws the flowers 
-  if (setflowers){ //if statement to toggle flowers on or off 
+  if (setflowers) { //if statement to toggle flowers on or off 
     drawFlowers(0, 0) //draws the flowers
   }
 
 }
-
-//ellipse(100, 100, 45, 45); // draws a circle 45 pixels accross at location 100 pixels accross and 100 pixels down
-
 
 function drawleftBlade(x, y) {
 
@@ -65,7 +62,7 @@ function drawleftBlade(x, y) {
   rotate(0)
   rect(0, 0, bladewidth, bladeheight);
   pop()
-  
+
 }
 
 function drawBottomBlade(x, y) {
@@ -78,7 +75,7 @@ function drawBottomBlade(x, y) {
   rotate(90)
   rect(0, 0, bladewidth, bladeheight);
   pop()
-  
+
 }
 
 function drawtopBlade(x, y) {
@@ -90,7 +87,7 @@ function drawtopBlade(x, y) {
   rotate(270)
   rect(0, 0, bladewidth, bladeheight);
   pop()
- 
+
 }
 
 function drawrightBlade(x, y) {
@@ -103,7 +100,7 @@ function drawrightBlade(x, y) {
   rotate(180)
   rect(0, 0, bladewidth, bladeheight);
   pop()
-  
+
 
 }
 
@@ -123,7 +120,7 @@ function drawground(x, y) {
 
 function drawWindmillBody(x, y) {
   push()
-  fill(windmillbodycolour) 
+  fill(windmillbodycolour)
   beginShape()
   vertex(60, 185)
   bezierVertex(65, 170, 75, 120, 80, 80)
